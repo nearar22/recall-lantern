@@ -7,7 +7,7 @@ const chain={...studioDevnet,id:61997,name:"GenLayer Studio Next",rpcUrls:{defau
 const client=createClient({chain,account:createAccount(key)}),sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function finalized(hash){for(let i=0;i<240;i++){const r=await client.getTransaction({hash}).catch(()=>null),s=String(r?.statusName??r?.status??"PENDING").toUpperCase();if(s==="FINALIZED")return r;if(["UNDETERMINED","DECLINED","CANCELED","CANCELLED"].includes(s))throw new Error(`Deployment ended ${s}`);await sleep(3000)}throw new Error("Deployment timed out")}
 const code=new Uint8Array(readFileSync(new URL("../contracts/recall_lantern.py",import.meta.url)));
-const fees=await client.estimateTransactionFees({leaderTimeunitsAllocation:400n,validatorTimeunitsAllocation:800n});
+const fees=await client.estimateTransactionFees({leaderTimeunitsAllocation:400n,validatorTimeunitsAllocation:600n});
 const hash=await client.deployContract({code,args:[],fees});console.log(`DEPLOY_TX=${hash}`);
 const receipt=await finalized(hash),execution=String(receipt.txExecutionResultName??receipt.txExecutionResult),consensus=String(receipt.resultName??receipt.result_name);
 if(execution!=="FINISHED_WITH_RETURN"||consensus==="MAJORITY_DISAGREE")throw new Error(`Deployment failed: ${execution} / ${consensus}`);
