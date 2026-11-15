@@ -35,7 +35,7 @@ jobs:
         working-directory: frontend
         env:
           VITE_CONTRACT_ADDRESS: "0x2b42D8C5Af18de58115bdcF3DE0B17099ABda46B"
-          VITE_DEMO_CASE_ID: "kettle-24-demo"
+          VITE_DEMO_CASE_ID: "recall-lantern-mwibgh0z"
           VITE_GENLAYER_RPC_URL: "https://studio-next.genlayer.com/api"
           VITE_GENLAYER_CHAIN_ID: "61997"
       - uses: actions/configure-pages@v5
