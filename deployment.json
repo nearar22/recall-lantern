@@ -3,10 +3,20 @@
   "network": "GenLayer Studio Next",
   "chainId": 61997,
   "rpc": "https://studio-next.genlayer.com/api",
-  "contractAddress": "0x686821D6faacf435b8b0713Fc3d37fE2eA0BE214",
-  "deploymentTransaction": "0x4e0d4b63f1f0b6664da57b40d41ecee0838c84281a0380424ed37f74f58e94eb",
-  "sourceCommit": "454485023daf411daedaf9d28569731dbdd8f25e",
+  "contractAddress": "0x2b42D8C5Af18de58115bdcF3DE0B17099ABda46B",
+  "deploymentTransaction": "0x4be888bc64ff755cb63332a7991de9a2e50b4ef798015be93911d1213fb19f97",
+  "sourceCommit": "2e5bacbfa8d3ae3a31027f1620b0a9bc26b1539b",
   "deployedAt": "2026-11-15",
   "execution": "FINISHED_WITH_RETURN",
-  "consensus": "MAJORITY_AGREE"
+  "consensus": "MAJORITY_AGREE",
+  "liveValidation": {
+    "caseId": "recall-lantern-mwibgh0z",
+    "openTransaction": "0xe8eb3941fcb8c54c3805843d2e0f8e6d5f459c1f8a7faa75180af3a3def63c7f",
+    "assessmentTransaction": "0x0e235e8582189ccb4eeb3f67cc34ed734daf624afeb90aba20ee25409080e2ab",
+    "finalizationTransaction": "0xbc2f70c539e3096b4e9277d7e53d12a4fcf1925645a65c3cece38368dfb3c422",
+    "status": "FINAL",
+    "verdict": "MATCH",
+    "action": "STOP_USE",
+    "receipt": "93cf0a92d40beb4d02e11cd7870291691f65e195375c9f0c017fbcd056e933ab"
+  }
 }

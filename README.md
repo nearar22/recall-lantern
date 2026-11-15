@@ -124,7 +124,18 @@ Recall Lantern is advisory. For a real product, follow the regulator and manufac
 ## Reviewed deployment
 
 - Network: GenLayer Studio Next (`61997`)
-- Contract: `0x686821D6faacf435b8b0713Fc3d37fE2eA0BE214`
-- Deployment transaction: `0x4e0d4b63f1f0b6664da57b40d41ecee0838c84281a0380424ed37f74f58e94eb`
-- Reviewed source commit: `454485023daf411daedaf9d28569731dbdd8f25e`
+- Contract: `0x2b42D8C5Af18de58115bdcF3DE0B17099ABda46B`
+- Deployment transaction: `0x4be888bc64ff755cb63332a7991de9a2e50b4ef798015be93911d1213fb19f97`
+- Reviewed source commit: `2e5bacbfa8d3ae3a31027f1620b0a9bc26b1539b`
 - Deployment result: `FINISHED_WITH_RETURN` / `MAJORITY_AGREE`
+
+## Live end-to-end proof
+
+- Case: `recall-lantern-mwibgh0z`
+- Open: `0xe8eb3941fcb8c54c3805843d2e0f8e6d5f459c1f8a7faa75180af3a3def63c7f`
+- Intelligent assessment: `0x0e235e8582189ccb4eeb3f67cc34ed734daf624afeb90aba20ee25409080e2ab`
+- Finalization: `0xbc2f70c539e3096b4e9277d7e53d12a4fcf1925645a65c3cece38368dfb3c422`
+- Final state: `FINAL` · `MATCH` · `STOP_USE`
+- Immutable receipt: `93cf0a92d40beb4d02e11cd7870291691f65e195375c9f0c017fbcd056e933ab`
+
+The smoke test opens a case, runs the real consensus assessment against two separately hosted demo fixtures, verifies two bound source receipts, finalizes the case, and reads the persisted final receipt back from Studio Next. The fixtures are intentionally synthetic and are never presented as real recall notices.
