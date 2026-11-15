@@ -120,3 +120,16 @@ def test_challenged_case_is_permissionlessly_finalizable(direct_vm, direct_deplo
     final = contract.finalize_case("kettle-24")
     assert final["assessment"]["verdict"] == "UNCERTAIN"
     assert contract.get_case("kettle-24")["history"][0]["verdict"] == "MATCH"
+
+
+def test_normalizer_accepts_distinct_quotes_from_the_same_source(direct_deploy):
+    contract = direct_deploy(CONTRACT)
+    instance = object.__getattribute__(contract, "_instance")
+    normalize = sys.modules[instance.__class__.__module__]._normalize
+    content = "Northstar K200 LOT-24A is recalled. Stop using the kettle immediately."
+    fetched = [
+        {"source_index": 0, "url": REG, "host": "regulator.example.gov", "available": True, "content": content, "sha256": "a" * 64},
+        {"source_index": 1, "url": MAKER, "host": "maker.example.com", "available": True, "content": "Northstar confirms the K200 LOT-24A recall.", "sha256": "b" * 64},
+    ]
+    raw = {"verdict": "MATCH", "hazard": 84, "matched_fields": ["PRODUCT", "BRAND", "MODEL", "LOT"], "action": "STOP_USE", "summary": "Both authorities identify the exact product model and lot as recalled.", "evidence": [{"source_index": 0, "quote": "Northstar K200 LOT-24A is recalled."}, {"source_index": 0, "quote": "Stop using the kettle immediately."}]}
+    assert len(normalize(raw, fetched)["evidence"]) == 2
