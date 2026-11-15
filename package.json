@@ -1,0 +1,12 @@
+{
+  "name": "recall-lantern",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "deploy": "node --env-file-if-exists=../.env --env-file-if-exists=.env scripts/deploy.mjs",
+    "test": "pytest -q",
+    "build": "npm --prefix frontend run build"
+  },
+  "dependencies": {"genlayer-js": "2.0.0-rc.1"}
+}

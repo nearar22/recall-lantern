@@ -1,0 +1,6 @@
+export const blankCase={id:"",product:"",brand:"",model:"",lot:"",status:"READY",sources:[],assessment:{},history:[],challenge_used:false,appeal_deadline:0,final_receipt:""};
+export function clean(value){if(typeof value==="bigint")return Number(value);if(Array.isArray(value))return value.map(clean);if(value&&typeof value==="object")return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,clean(v)]));return value}
+export function short(value,n=7){const text=String(value||"");return text.length>n*2?`${text.slice(0,n)}…${text.slice(-n)}`:text}
+export function verdictTone(verdict){return({MATCH:"danger",NO_MATCH:"clear",UNCERTAIN:"watch",SOURCE_UNAVAILABLE:"offline"})[verdict]||"idle"}
+export function remaining(deadline,now=Math.floor(Date.now()/1000)){const seconds=Math.max(0,Number(deadline||0)-now);if(!seconds)return"closed";const h=Math.floor(seconds/3600),m=Math.floor((seconds%3600)/60);return`${h}h ${String(m).padStart(2,"0")}m`}
+export function canChallenge(record,wallet,now=Math.floor(Date.now()/1000)){return record.status==="ASSESSED"&&!record.challenge_used&&Boolean(wallet)&&String(record.owner||"").toLowerCase()===String(wallet).toLowerCase()&&now<=Number(record.appeal_deadline||0)}
