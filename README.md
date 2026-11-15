@@ -124,7 +124,7 @@ Recall Lantern is advisory. For a real product, follow the regulator and manufac
 ## Reviewed deployment
 
 - Network: GenLayer Studio Next (`61997`)
-- Contract: `0xD307d6D6479Bf1bE78cCB9eEC03778f9E714b641`
-- Deployment transaction: `0x57cca139279f4c79b7e7995229d7dafcbe193d788f24176c1dfd396e98e8e13a`
-- Reviewed source commit: `72aef0c741b3398b9b0574d1ae53def2783209f4`
+- Contract: `0x686821D6faacf435b8b0713Fc3d37fE2eA0BE214`
+- Deployment transaction: `0x4e0d4b63f1f0b6664da57b40d41ecee0838c84281a0380424ed37f74f58e94eb`
+- Reviewed source commit: `454485023daf411daedaf9d28569731dbdd8f25e`
 - Deployment result: `FINISHED_WITH_RETURN` / `MAJORITY_AGREE`

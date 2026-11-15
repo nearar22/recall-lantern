@@ -3,9 +3,9 @@
   "network": "GenLayer Studio Next",
   "chainId": 61997,
   "rpc": "https://studio-next.genlayer.com/api",
-  "contractAddress": "0xD307d6D6479Bf1bE78cCB9eEC03778f9E714b641",
-  "deploymentTransaction": "0x57cca139279f4c79b7e7995229d7dafcbe193d788f24176c1dfd396e98e8e13a",
-  "sourceCommit": "72aef0c741b3398b9b0574d1ae53def2783209f4",
+  "contractAddress": "0x686821D6faacf435b8b0713Fc3d37fE2eA0BE214",
+  "deploymentTransaction": "0x4e0d4b63f1f0b6664da57b40d41ecee0838c84281a0380424ed37f74f58e94eb",
+  "sourceCommit": "454485023daf411daedaf9d28569731dbdd8f25e",
   "deployedAt": "2026-11-15",
   "execution": "FINISHED_WITH_RETURN",
   "consensus": "MAJORITY_AGREE"
