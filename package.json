@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "deploy": "node --env-file-if-exists=../.env --env-file-if-exists=.env scripts/deploy.mjs",
+    "smoke": "node --env-file-if-exists=../.env --env-file-if-exists=.env scripts/smoke.mjs",
     "test": "pytest -q",
     "build": "npm --prefix frontend run build"
   },

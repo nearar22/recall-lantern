@@ -120,3 +120,11 @@ scripts/deploy.mjs            Studio Next deployment
 ```
 
 Recall Lantern is advisory. For a real product, follow the regulator and manufacturer directly.
+
+## Reviewed deployment
+
+- Network: GenLayer Studio Next (`61997`)
+- Contract: `0xD307d6D6479Bf1bE78cCB9eEC03778f9E714b641`
+- Deployment transaction: `0x57cca139279f4c79b7e7995229d7dafcbe193d788f24176c1dfd396e98e8e13a`
+- Reviewed source commit: `72aef0c741b3398b9b0574d1ae53def2783209f4`
+- Deployment result: `FINISHED_WITH_RETURN` / `MAJORITY_AGREE`
